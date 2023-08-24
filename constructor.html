@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="text/json">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="About page"/>
+    <link rel="shortcut icon" href="logo-tsu.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/constructor.css"/>
+    <title>Make your burger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <header>
+            <div class="header__column">
+                <ul class="menu">
+                    <a href=""><img class="letter" src="img/symbol.svg" alt=""></a>
+                    <a href="index.html"><li>Discover</li></a>
+                    <a href="#"> <li>Make Your Burger</li></a>
+                </ul>
+            </div>
+            <div class="header__column">
+                <ul class="phone">
+                    <a href="tel:+78004378722"><li class="call">Call Me Back</li></a>
+                    <a href="tel:+78004378722"> <li class="num">8 800 437-87-22</li></a>
+                    <a href=""><li><img class="human" src="img/header.svg" alt=""></li></a>
+                </ul>
+            </div>
+        </header>
+        <main>
+<div class="title">Make <br> Your <br> Burger</div>
+            <div class="burger">
+                <div class="burger_layer burger_layer_1">  <img class="bun_bottom" src="img/bun_bottom.svg" alt=""></div>
+                <!--<div class="burger_layer burger_layer_2"></div>
+                <div class="burger_layer burger_layer_3"></div>
+                <div class="burger_layer burger_layer_4"></div>
+                <div class="burger_layer burger_layer_5"></div>
+                <div class="burger_layer burger_layer_6"></div>
+                <div class="burger_layer burger_layer_7"></div>
+                <div class="burger_layer burger_layer_8"></div>
+                <div class="burger_layer burger_layer_9"></div>
+                <div class="burger_layer burger_layer_10"></div>
+                <div class="burger_layer burger_layer_11"></div>
+                <div class="burger_layer burger_layer_12"></div>
+                <div class="burger_layer burger_layer_13"></div>
+                <div class="burger_layer burger_layer_14"></div>
+                <div class="burger_layer burger_layer_15"></div>
+                <div class="burger_layer burger_layer_16"></div>
+                <div class="burger_layer burger_layer_17"></div>-->
+            </div>
+            <div class="sum">
+                <p class="subtitle">Summary</p>
+                <div class="price">
+<div id="price" class="dollars">$ 0.00</div>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+                <p class="gift">Build a <span>$10</span> Burger and Get a Gift</p>
+                <div class="details">
+                    <div id="time" class="time">0 min</div>
+                    <div id="weight" class="weight">0 oz</div>
+                    <div id="kcal" class="kcal">0 kcal</div>
+                </div>
+                <button id="ketchup" class="ketchup"><span class="red">+ Tomato Ketchup</span> 1.2 oz</button>
+            </div>
+
+        </main>
+        <section class="ingredients">
+            <div class="ing__cutlet ing">
+                <img class="size" src="img/cutlet-ing.svg" alt="">
+                <p>Cutlet</p>
+                <div class="calc">
+                    <button id="minus-cutlet" class="minus">-</button>
+                    <div id="amount-cutlet" class="amount">0</div>
+                    <button id="plus-cutlet" class="plus">+</button>
+                </div>
+            </div>
+            <div class="ing__mayo ing">
+                <img class="size"  src="img/mayo-ing.svg" alt="">
+                <p>Mayo</p>
+                <div class="calc">
+                    <button id="minus-mayo" class="minus">-</button>
+                    <div id="amount-mayo" class="amount">0</div>
+                    <button id="plus-mayo" class="plus">+</button>
+                </div>
+            </div>
+            <div class="ing__onions ing">
+                <img class="size"  src="img/onion-ing.svg" alt="">
+                <p>Onions</p>
+                <div class="calc">
+                    <button id="minus-onion" class="minus">-</button>
+                    <div id="amount-onion" class="amount">0</div>
+                    <button id="plus-onion" class="plus">+</button>
+                </div>
+            </div>
+            <div class="ing__tomato ing">
+                <img class="size" src="img/tomatoe-ing.svg" alt="">
+                <p>Tomato</p>
+                <div class="calc">
+                    <button id="minus-tomato" class="minus">-</button>
+                    <div id="amount-tomato" class="amount">0</div>
+                    <button id="plus-tomato" class="plus">+</button>
+                </div>
+            </div>
+            <div class="ing__cucumber ing">
+                <img  class="size" src="img/cucumber-ing.svg" alt="">
+                <p>Cucumber</p>
+                <div class="calc">
+                    <button id="minus-cucumber" class="minus">-</button>
+                    <div id="amount-cucumber" class="amount">0</div>
+                    <button id="plus-cucumber" class="plus">+</button>
+                </div>
+            </div>
+            <div class="ing__cheese ing">
+                <img  class="size"  src="img/cheese-ing.svg" alt="">
+                <p>Cheese</p>
+                <div class="calc">
+                    <button id="minus-cheese" class="minus">-</button>
+                    <div id="amount-cheese" class="amount">0</div>
+                    <button id="plus-cheese" class="plus">+</button>
+                </div>
+            </div>
+            <div class="ing__salad ing">
+                <img class="size"  src="img/salad-ing.svg" alt="">
+                <p>Salad</p>
+                <div class="calc">
+                    <button id="minus-salad" class="minus">-</button>
+                    <div id="amount-salad" class="amount">0</div>
+                    <button id="plus-salad" class="plus">+</button>
+                </div>
+            </div>
+            <div class="ing__bun ing">
+                <img  class="size"  src="img/bun_middle-ing.svg" alt="">
+                <p>Bun</p>
+                <div class="calc">
+                    <button id="minus-bun"  class="minus">-</button>
+                    <div id="amount-bun" class="amount">0</div>
+                    <button id="plus-bun" class="plus">+</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <ul class="footer__flex__info">
+                <li class="date">2022. Make Your Burger</li>
+                <a href=""><li class="information">Privacy Policy </li></a>
+                <a href=""><li class="information"> | Terms & Conditions</li></a>
+            </ul>
+            <ul class="footer__flex__links">
+                <a href=""><li><img src="img/visa.svg" alt=""></li></a>
+                <a href=""><li><img src="img/master-card.svg" alt=""></li></a>
+                <a href=""><li><img src="img/g-pay.svg" alt=""></li></a>
+                <a href=""><li><img src="img/apple-pay.svg" alt=""></li></a>
+                <a href=""><li><img src="img/paypal.svg" alt=""></li></a>
+                <a href=""><li><img src="img/bitcoin.svg" alt=""></li></a>
+                <a href=""><li><img src="img/Etherium.svg" alt=""></li></a>
+            </ul>
+        </footer>
+    </div>
+</div>
+</body>
+
+<script src="index.js"></script>
+</html>
