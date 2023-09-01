@@ -20,15 +20,15 @@
             <div class="header__column">
                 <ul class="menu">
                     <a href=""><img class="letter" src="img/symbol.svg" alt=""></a>
-                    <a href="index.html"><li>Discover</li></a>
-                    <a href="#"> <li>Make Your Burger</li></a>
+                    <a class="hide" href="index.html"><li>Discover</li></a>
+                    <a class="hide" href="#"> <li>Make Your Burger</li></a>
                 </ul>
             </div>
             <div class="header__column">
                 <ul class="phone">
                     <a href="tel:+78004378722"><li class="call">Call Me Back</li></a>
-                    <a href="tel:+78004378722"> <li class="num">8 800 437-87-22</li></a>
-                    <a href=""><li><img class="human" src="img/header.svg" alt=""></li></a>
+                    <a class="hide" href="tel:+78004378722"> <li class="num">8 800 437-87-22</li></a>
+                    <a href=""><li><img class="human"  alt=""></li></a>
                 </ul>
             </div>
         </header>
@@ -36,22 +36,6 @@
 <div class="title">Make <br> Your <br> Burger</div>
             <div class="burger">
                 <div class="burger_layer burger_layer_1">  <img class="bun_bottom" src="img/bun_bottom.svg" alt=""></div>
-                <!--<div class="burger_layer burger_layer_2"></div>
-                <div class="burger_layer burger_layer_3"></div>
-                <div class="burger_layer burger_layer_4"></div>
-                <div class="burger_layer burger_layer_5"></div>
-                <div class="burger_layer burger_layer_6"></div>
-                <div class="burger_layer burger_layer_7"></div>
-                <div class="burger_layer burger_layer_8"></div>
-                <div class="burger_layer burger_layer_9"></div>
-                <div class="burger_layer burger_layer_10"></div>
-                <div class="burger_layer burger_layer_11"></div>
-                <div class="burger_layer burger_layer_12"></div>
-                <div class="burger_layer burger_layer_13"></div>
-                <div class="burger_layer burger_layer_14"></div>
-                <div class="burger_layer burger_layer_15"></div>
-                <div class="burger_layer burger_layer_16"></div>
-                <div class="burger_layer burger_layer_17"></div>-->
             </div>
             <div class="sum">
                 <p class="subtitle">Summary</p>
@@ -125,7 +109,7 @@
                 </div>
             </div>
             <div class="ing__salad ing">
-                <img class="size"  src="img/salad-ing.svg" alt="">
+                <img class="size"  src="img/2salad-ing.svg" alt="">
                 <p>Salad</p>
                 <div class="calc">
                     <button id="minus-salad" class="minus">-</button>
@@ -142,6 +126,25 @@
                     <button id="plus-bun" class="plus">+</button>
                 </div>
             </div>
+        </section>
+        <section>
+            <form id="form" class="card">
+<div class="card__top">
+    <div class="card__title">Checkout</div>
+    <button class="close">&#10006</button>
+</div>
+                <div class="card__main">
+                    <input required type="text" class="name" placeholder="Your name">
+                    <input required type="tel" class="number" placeholder="Phone number">
+                    <input required type="text" class="address" placeholder="Shipping address">
+                    <select  required class="time-checkout" id='dateInput'></select>
+                </div>
+                <div class="card__bottom">
+                    <button class="card__btn btn-cancel">Cancel</button>
+                    <button disabled class="card__btn btn-accept">Checkout</button>
+                </div>
+            </form>
+            <div id="dark"></div>
         </section>
         <footer>
             <ul class="footer__flex__info">
