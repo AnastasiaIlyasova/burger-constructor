@@ -1,34 +1,33 @@
 let minusCutlet = document.getElementById("minus-cutlet");
 let plusCutlet = document.getElementById("plus-cutlet");
-minusCutlet.setAttribute('disabled', '')
 
 let minusMayo = document.getElementById("minus-mayo");
 let plusMayo = document.getElementById("plus-mayo");
-minusMayo.setAttribute('disabled', '')
 
 let minusOnion = document.getElementById("minus-onion");
 let plusOnion = document.getElementById("plus-onion");
-minusOnion.setAttribute('disabled', '')
 
 let minusTomato = document.getElementById("minus-tomato");
 let plusTomato = document.getElementById("plus-tomato");
-minusTomato.setAttribute('disabled', '')
 
 let minusCucumber = document.getElementById("minus-cucumber");
 let plusCucumber = document.getElementById("plus-cucumber");
-minusCucumber.setAttribute('disabled', '')
 
 let minusCheese = document.getElementById("minus-cheese");
 let plusCheese = document.getElementById("plus-cheese");
-minusCheese.setAttribute('disabled', '')
 
 let minusSalad = document.getElementById("minus-salad");
 let plusSalad = document.getElementById("plus-salad");
-minusSalad.setAttribute('disabled', '')
 
 let minusBun = document.getElementById("minus-bun");
 let plusBun = document.getElementById("plus-bun");
-minusBun.setAttribute('disabled', '')
+
+//Disabled for minus
+let minusIngredients = document.querySelectorAll('.minus')
+console.log(minusIngredients)
+for(let i=0; i<=minusIngredients.length-1;i++){
+    minusIngredients[i].setAttribute('disabled', '')
+}
 
 let price = document.getElementById("price");
 let dollars = 0
@@ -66,15 +65,17 @@ let amountNumSalad = 0
 let amountBun = document.getElementById("amount-bun");
 let amountNumBun = 0
 
+
 let ketchup = document.getElementById("ketchup");
+let ketchupImg = document.querySelector(".ketchup-img");
 ketchup.addEventListener('click', function (){
     add(1,1.2,3,1)
+    ketchupImg.style.display='inline-block'
 });
 
 let layers = document.getElementsByClassName('.burger_layer')
 let burger = document.querySelector(".burger");
 let elem = ''
-
 
 plusCutlet.addEventListener('click', function (){
     add(5,  1,100, 1)
@@ -84,14 +85,6 @@ plusCutlet.addEventListener('click', function (){
     let ing = 'cutlet'
     addImg(ing)
     disable()
-    //  changeAmount(amountNumCutlet, amountCutlet, minusCutlet)
-        /* if(burger.children.length>=15){
-       plusCutlet.setAttribute('disabled', '')
-           plusMayo.setAttribute('disabled', '')
-   }else{
-      plusCutlet.removeAttribute('disabled')
-           plusMayo.removeAttribute('disabled')
-    }*/
 })
 
 plusMayo.addEventListener('click', function (){
@@ -101,26 +94,12 @@ plusMayo.addEventListener('click', function (){
   minusMayo.removeAttribute('disabled')
     let ing = 'mayo'
     addImg(ing)
-  /*  if(burger.children.length>=15){
-        plusMayo.setAttribute('disabled', '')
-        plusCutlet.setAttribute('disabled', '')
-    }else{
-       plusMayo.removeAttribute('disabled')
-        plusCutlet.removeAttribute('disabled')
-   }
-        if(burger.children.length<=14){
-            plusMayo.removeAttribute('disabled')
-        }*/
     disable()
     elem.classList.add('less-size-mayo')
 })
 
 plusOnion.addEventListener('click', function (){
     add(3,  5,20, 1)
-
-    //убираю маржин у лука
-
-
     amountNumOnion+=1
     amountOnion.textContent = `${amountNumOnion}`;
     minusOnion.removeAttribute('disabled')
@@ -151,7 +130,6 @@ plusCucumber.addEventListener('click', function (){
     disable()
     elem.classList.add('less-size')
     elem.id = 'less-size-cucumber';
-   // elem.classList.add('less-size-cucumber')
 })
 
 plusCheese.addEventListener('click', function (){
@@ -186,7 +164,6 @@ plusBun.addEventListener('click', function (){
     disable()
 })
 
-
 minusCutlet.addEventListener('click', function (){
     remove(5,1,100,1)
     if(amountNumCutlet===1){
@@ -199,9 +176,7 @@ minusCutlet.addEventListener('click', function (){
     document.querySelector('.amount').textContent = `${amountNumCutlet}`;
    if(burger.children.length<=15){
    plusCutlet.removeAttribute('disabled')
-       plusMayo.removeAttribute('disabled')
     }
-
     let ing = 'cutlet'
     deleteImg(ing)
     disable()
@@ -214,12 +189,10 @@ minusMayo.addEventListener('click', function (){
       amountNumMayo=0
         minusMayo.setAttribute('disabled', '')
   }else{
-    //  minusMayo.removeAttribute('disabled')
         amountNumMayo-=1
    }
     if(burger.children.length<=15){
         plusMayo.removeAttribute('disabled')
-        plusCutlet.removeAttribute('disabled')
     }
     amountMayo.textContent = `${amountNumMayo}`;
    let ing='mayo'
@@ -329,7 +302,6 @@ function add (valueMinutes, valueOz,valueKcal, valuePrice){
 }
 
 function remove(valueMinutes,  valueOz,valueKcal, valuePrice){
-  //if(minutes<=valueMinutes || oz<=valueOz || kcalNum<=valueKcal || dollars<=valuePrice ) {
     if(minutes<=0 || oz<=0 || kcalNum<=0 || dollars<=0 ) {
      minutes=0
      oz=0
@@ -357,7 +329,7 @@ function deleteImg(ing){
             break
         }
     }
-    }
+}
 
 function addImg(ing){
         elem = document.createElement("div");
@@ -371,33 +343,17 @@ function changeAmount(amountNum, amountDiv, minus){
     amountDiv.textContent = `${amountNum}`;
     minus.removeAttribute('disabled')
 }
+
 function disable(){
-    if(burger.children.length>=15){
-        plusCutlet.setAttribute('disabled', '')
-        plusMayo.setAttribute('disabled', '')
-        plusOnion.setAttribute('disabled', '')
-        plusTomato.setAttribute('disabled', '')
-        plusCucumber.setAttribute('disabled', '')
-        plusCheese.setAttribute('disabled', '')
-        plusSalad.setAttribute('disabled', '')
-        plusBun.setAttribute('disabled', '')
+    let plusIngredients = document.querySelectorAll('.plus')
+    console.log(plusIngredients)
+    for(let i=0; i<=plusIngredients.length-1;i++){
+    if(burger.children.length>=15) {
+        plusIngredients[i].setAttribute('disabled', '')
     }else{
-        plusCutlet.removeAttribute('disabled')
-        plusMayo.removeAttribute('disabled')
-        plusOnion.removeAttribute('disabled')
-        plusTomato.removeAttribute('disabled')
-        plusCucumber.removeAttribute('disabled')
-        plusCheese.removeAttribute('disabled')
-        plusSalad.removeAttribute('disabled')
-        plusBun.removeAttribute('disabled')
+        plusIngredients[i].removeAttribute('disabled')
+    }}
     }
-}
-let dateInput = document.getElementById('dateInput')
-/*dateInput.addEventListener('keydown', function(event) {
-    if (event.keyIdentifier == "Down") {
-        event.preventDefault()
-    }
-}, false);*/
 
 let checkoutBtn = document.querySelector('.checkout-btn')
 let card = document.querySelector('.card')
@@ -407,26 +363,33 @@ let accept = document.querySelector('.btn-accept')
 let wrapper = document.querySelector('.wrapper')
 let dark =document.getElementById('dark')
 
-
 checkoutBtn.addEventListener('click', function () {
-   // wrapper.style.opacity = '0.5'
     card.style.display = 'block'
     card.style.visibility = 'visible'
-  card.style.opacity = '2'
-      dark.className = "dark";
+    card.style.opacity = '2'
+    dark.className = "dark";
 })
 
 close.addEventListener('click', function () {
-    card.style.display = 'none'
-    card.style.visibility = 'hidden'
-    dark.classList.remove("dark");
+    hideCard ()
+})
 
-})
+//Close checkout with escape
+document.addEventListener('keydown', function(e) {
+    if( e.keyCode == 27 ){
+        hideCard ()
+    }
+});
+
 cancel.addEventListener('click', function () {
+    hideCard ()
+})
+
+function hideCard (){
     card.style.display = 'none'
     card.style.visibility = 'hidden'
     dark.classList.remove("dark");
-})
+}
 
 //Checkout btn
 let form =document.getElementById('form')
@@ -456,9 +419,14 @@ for(let i=0; i<=55; i++){
         minutesSelect.push(i)
     }
 }
-for(let i=0; i<=hours.length-1; i++){
-    countHours(i)
-}
+
+//select.addEventListener('click', function () {
+    for (let i = 0; i <= hours.length - 1; i++) {
+        countHours(i)
+    }
+//})
+
+
 function countHours(numberOfHours){
     for(let i=0; i<=minutesSelect.length-1; i++){
         minutesSelect[0]=`00`
@@ -473,5 +441,29 @@ function countHours(numberOfHours){
             inner += `<option>0${hours[numberOfHours]}:${minutesSelect[i]}</option>`
             select.innerHTML = inner
         }
+    }
+}
+
+//Show menu
+let burgerLink = document.querySelector('.burger-link')
+let main = document.querySelector('main')
+let ingredients = document.querySelector('.ingredients')
+let footer = document.querySelector('footer')
+let adaptiveBlock = document.querySelector('.adaptive-block')
+
+burgerLink.addEventListener('click', function (){
+    main.classList.toggle("none-display");
+    ingredients.classList.toggle("none-display");
+    footer.classList.toggle("none-display");
+    adaptiveBlock.classList.toggle("block-display");
+    burgerLink.classList.toggle("toggle-btn");
+})
+
+//Adaptive
+window.addEventListener('resize', move);
+function move(){
+    const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    if (viewport_width <= 769) {
+        document.querySelector('.title').innerHTML = "Make <br> your burger";
     }
 }
