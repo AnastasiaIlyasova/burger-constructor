@@ -401,7 +401,7 @@ footer{
 .adaptive-flex__third-column > *:not(:last-child){
 	padding-bottom: 15px;
 }
-
+/*
 @media (max-width: 1200px) {
 	.ingredients{
 		display: grid;
@@ -567,4 +567,4 @@ footer{
 	.burger_layer img{
 		width: 20%;
 	}
-}
+}*/

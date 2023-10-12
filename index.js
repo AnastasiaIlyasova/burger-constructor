@@ -70,7 +70,7 @@ let ketchup = document.getElementById("ketchup");
 let ketchupImg = document.querySelector(".ketchup-img");
 ketchup.addEventListener('click', function (){
     add(1,1.2,3,1)
-    ketchupImg.style.display='inline-block'
+    ketchupImg.style.display='block'
 });
 
 let layers = document.getElementsByClassName('.burger_layer')
@@ -174,7 +174,7 @@ minusCutlet.addEventListener('click', function (){
         amountNumCutlet-=1
     }
     document.querySelector('.amount').textContent = `${amountNumCutlet}`;
-   if(burger.children.length<=15){
+   if(burger.children.length<=25){
    plusCutlet.removeAttribute('disabled')
     }
     let ing = 'cutlet'
@@ -191,7 +191,7 @@ minusMayo.addEventListener('click', function (){
   }else{
         amountNumMayo-=1
    }
-    if(burger.children.length<=15){
+    if(burger.children.length<=25){
         plusMayo.removeAttribute('disabled')
     }
     amountMayo.textContent = `${amountNumMayo}`;
@@ -346,12 +346,16 @@ function changeAmount(amountNum, amountDiv, minus){
 
 function disable(){
     let plusIngredients = document.querySelectorAll('.plus')
+    let sureElem = document.querySelector('.sure-element')
     console.log(plusIngredients)
     for(let i=0; i<=plusIngredients.length-1;i++){
-    if(burger.children.length>=15) {
+    if(burger.children.length>=25) {
         plusIngredients[i].setAttribute('disabled', '')
+        sureElem.style.display='block'
+
     }else{
         plusIngredients[i].removeAttribute('disabled')
+        sureElem.style.display='none'
     }}
     }
 
