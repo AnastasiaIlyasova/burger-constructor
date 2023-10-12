@@ -43,10 +43,6 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
-
-::-webkit-calendar-picker-indicator {
-    background: url('/img/arrow.svg') 30% 50% no-repeat;
-}
 /*--------------------*/
 .container{
     max-width: 1544px;
@@ -207,7 +203,6 @@ footer{
     align-self: center;
 
 }
-
 .gift{
     color:#1F2939;
     font-size: 14px;
@@ -254,7 +249,7 @@ span{
     flex-wrap: wrap;
 }
 .ing{
-border: 1px solid #F0F7FA;
+    border: 1px solid #F0F7FA;
     border-radius: 32px;
     padding: 24px 18px;
 
@@ -276,7 +271,7 @@ border: 1px solid #F0F7FA;
     padding: 6px 13px;
     background-color: rgba(245, 245, 255, 1);
     border-radius: 99px;
-font-size: 18px;
+    font-size: 18px;
 }
 .amount{
     color: #1F2939;
@@ -703,7 +698,7 @@ main{
     }
     .card__main {
         padding-bottom: 16px;
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
     .card{
         height: 457px;
@@ -740,13 +735,7 @@ main{
     footer{
         display: block;
     }
-    .time{
-        padding: 20px 37px;
-    }
-    .weight{
-        padding: 20px 37px;
-    }
-    .kcal{
+    .ingredients > *{
         padding: 20px 37px;
     }
     footer{
@@ -779,7 +768,6 @@ main{
         margin-bottom: 19px;
         top: 50px;
     }
-
     .time{
         margin-left: 30px;
     }

@@ -425,12 +425,9 @@ for(let i=0; i<=55; i++){
     }
 }
 
-//select.addEventListener('click', function () {
-    for (let i = 0; i <= hours.length - 1; i++) {
+for (let i = 0; i <= hours.length - 1; i++) {
         countHours(i)
     }
-//})
-
 
 function countHours(numberOfHours){
     for(let i=0; i<=minutesSelect.length-1; i++){
