@@ -86,7 +86,7 @@ header{
 .human{
 	padding: 24px 24px;
 	border-radius: 99px;
-	background: url('/img/header.svg') 50% 50% no-repeat rgba(245, 245, 255, 1);
+	background: url('../img/header.svg') 50% 50% no-repeat rgba(245, 245, 255, 1);
 }
 .call{
 	color: #FF4D4F;
