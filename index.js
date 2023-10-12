@@ -24,7 +24,6 @@ let plusBun = document.getElementById("plus-bun");
 
 //Disabled for minus
 let minusIngredients = document.querySelectorAll('.minus')
-console.log(minusIngredients)
 for(let i=0; i<=minusIngredients.length-1;i++){
     minusIngredients[i].setAttribute('disabled', '')
 }
@@ -326,7 +325,6 @@ function deleteImg(ing){
     for (let i=0; i<=test.length; i++){
         if(test[i].innerHTML === `<img src=\"img/${ing}-ing.svg\" alt=\"\">`){
             test[i].remove()
-            console.log(test[i])
             break
         }
     }
@@ -348,7 +346,6 @@ function changeAmount(amountNum, amountDiv, minus){
 function disable(){
     let plusIngredients = document.querySelectorAll('.plus')
     let sureElem = document.querySelector('.sure-element')
-    console.log(plusIngredients)
     for(let i=0; i<=plusIngredients.length-1;i++){
     if(burger.children.length>=25) {
         plusIngredients[i].setAttribute('disabled', '')
@@ -400,7 +397,6 @@ function hideCard (){
 let form =document.getElementById('form')
 form.addEventListener('change', changeFormHandler);
 function changeFormHandler() {
-    console.log(form.checkValidity());
     if (form.checkValidity()) {
         accept.removeAttribute('disabled');
         accept.addEventListener('click', function () {
@@ -434,7 +430,6 @@ function countHours(numberOfHours){
         minutesSelect[0]=`00`
         minutesSelect[1]=`05`
         if(numberOfHours.toString().length-1===1){
-            console.log( minutesSelect[1])
             minutesSelect[0]=`00`
             minutesSelect[1]=`05`
             inner += `<option>${hours[numberOfHours]}:${minutesSelect[i]}</option>`

@@ -92,7 +92,7 @@ header{
 	color: #FF4D4F;
 	font-weight: 600;
 	line-height: 20px;
-	background: url('/img/phone.svg') 5% 44% no-repeat rgba(255, 237, 237, 1);
+	background: url('../img/phone.svg') 5% 44% no-repeat rgba(255, 237, 237, 1);
 	padding: 6px 12px 6px 28px;
 	border-radius: 99px;
 	transition-duration: 0.3s;
@@ -368,13 +368,13 @@ footer{
 }
 
 .burger-link{
-	background: url('/img/adaptive-menu.svg') 50% 50% no-repeat rgba(245, 245, 255, 1);
+	background: url('../img/adaptive-menu.svg') 50% 50% no-repeat rgba(245, 245, 255, 1);
 	padding: 24px 24px;
 	border-radius: 99px;
 	display: none;
 }
 .toggle-btn{
-	background: url('/img/close.svg') 50% 50% no-repeat rgba(245, 245, 255, 1);
+	background: url('../img/close.svg') 50% 50% no-repeat rgba(245, 245, 255, 1);
 }
 .adaptive-block{
 	display: none;

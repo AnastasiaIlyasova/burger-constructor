@@ -85,13 +85,13 @@ header{
 .human{
     padding: 24px 24px;
     border-radius: 99px;
-    background: url('/img/header.svg') 50% 50% no-repeat rgba(245, 245, 255, 1);
+    background: url('../img/header.svg') 50% 50% no-repeat rgba(245, 245, 255, 1);
 }
 .call{
     color: #FF4D4F;
     font-weight: 600;
     line-height: 20px;
-    background: url('/img/phone.svg') 5% 50% no-repeat rgba(255, 237, 237, 1);
+    background: url('../img/phone.svg') 5% 50% no-repeat rgba(255, 237, 237, 1);
     padding: 6px 12px 6px 28px;
     border-radius: 99px;
     transition-duration: 0.3s;
@@ -227,15 +227,15 @@ span{
 }
 .time{
     padding: 20px 44px;
-    background: url('/img/time.svg') 0% 50% no-repeat;
+    background: url('../img/time.svg') 0% 50% no-repeat;
 }
 .weight{
     padding: 20px 44px;
-    background: url('/img/weight.svg') 0% 50% no-repeat;
+    background: url('../img/weight.svg') 0% 50% no-repeat;
 }
 .kcal{
     padding: 20px 44px;
-    background: url('/img/kcal.svg') 0% 50% no-repeat;
+    background: url('../img/kcal.svg') 0% 50% no-repeat;
 }
 .ingredients{
     margin: 71px 15px 0 15px;
@@ -441,7 +441,7 @@ span{
     font-size: 20px;
     font-weight: 600;
     padding-left: 35px;
-    background: url('/img/checkout.svg') 2% 50% no-repeat;
+    background: url('../img/checkout.svg') 2% 50% no-repeat;
 }
 .card__main{
     border-bottom: 2px solid #F5F5FF;
@@ -500,15 +500,15 @@ input:not(:last-child){
     padding-right: 8px;
 }
 .name{
-    background: url('/img/emoji-smile.svg') 4% 50% no-repeat;
+    background: url('../img/emoji-smile.svg') 4% 50% no-repeat;
     margin-top: 16px;
 }
 .address{
     margin-bottom: 16px;
-    background: url('/img/card-shipping.svg') 4% 50% no-repeat;
+    background: url('../img/card-shipping.svg') 4% 50% no-repeat;
 }
 .number{
-    background: url('/img/card-phone.svg') 4% 50% no-repeat;
+    background: url('../img/card-phone.svg') 4% 50% no-repeat;
 }
 
 input::placeholder {
@@ -539,7 +539,7 @@ input::placeholder {
     height: 100%;
 }
 .burger-link{
-    background: url('/img/adaptive-menu.svg') 50% 50% no-repeat rgba(245, 245, 255, 1);
+    background: url('../img/adaptive-menu.svg') 50% 50% no-repeat rgba(245, 245, 255, 1);
     padding: 24px 24px;
     border-radius: 99px;
     display: none;
@@ -547,7 +547,7 @@ input::placeholder {
     z-index: 98;
 }
 .toggle-btn{
-    background: url('/img/close.svg') 50% 50% no-repeat rgba(245, 245, 255, 1);
+    background: url('../img/close.svg') 50% 50% no-repeat rgba(245, 245, 255, 1);
 }
 .adaptive-block{
     display: none;
@@ -601,7 +601,7 @@ input::placeholder {
     line-height: 32px;
     padding: 16px 16px 16px 42px;
     border-radius: 16px;
-    background: url('/img/human-sure.svg') 4% 50% no-repeat #fff;
+    background: url('../img/human-sure.svg') 4% 50% no-repeat #fff;
     box-shadow: 0px 0.16604px 2.21381px 0px rgba(0, 0, 0, 0.01), 0px 0.39901px 5.32008px 0px rgba(0, 0, 0, 0.02), 0px 0.75129px 10.01724px 0px rgba(0, 0, 0, 0.02), 0px 1.34018px 17.86905px 0px rgba(0, 0, 0, 0.02), 0px 2.50666px 33.42209px 0px rgba(0, 0, 0, 0.03), 0px 6px 80px 0px rgba(0, 0, 0, 0.04);
 }
 
