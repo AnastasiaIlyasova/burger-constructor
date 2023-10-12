@@ -294,7 +294,8 @@ function add (valueMinutes, valueOz,valueKcal, valuePrice){
     minutes += valueMinutes
     document.querySelector('.time').textContent = `${minutes} min`;
     oz +=valueOz
-    document.querySelector('.weight').textContent = `${oz.toFixed(1)} oz`;
+    document.querySelector('.weight').textContent = `${oz.toFixed(1).replace(/[,.]?0+$/, '')
+    } oz`;
     kcalNum+=valueKcal
     document.querySelector('.kcal').textContent = `${kcalNum} kcal`;
     dollars+=valuePrice

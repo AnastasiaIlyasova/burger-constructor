@@ -20,7 +20,7 @@
             <ul class="menu">
                 <a href=""><img class="letter" src="img/symbol.svg" alt=""></a>
                 <a class="hide header-text" href="index.html"><li>Discover</li></a>
-                <a class="hide header-text" href="#"> <li>Make Your Burger</li></a>
+                <a class="hide header-text" href="constructor.html"> <li>Make Your Burger</li></a>
         </ul>
         </div>
         <div class="header__column">
@@ -41,7 +41,7 @@
             </div>
             <div class="adaptive-flex__third-column">
                 <p class="header-text">Anthony Thomas</p>
-                <a href=""><img src="img/avatar.svg"></a>
+                <a href=""><img class="adaptive-head" src="img/avatar.svg"></a>
             </div>
         </div>
     </section>
@@ -101,5 +101,26 @@
 </div>
   </div>
   </body>
-<script src="adaptive.js"></script>
+<script>
+    window.addEventListener('resize', move);
+    function move(){
+        const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        if (viewport_width <= 1600) {
+            document.querySelector('main').innerHTML = `<img src="img/burger.svg" alt="">`
+        }
+    }
+    let burgerLink = document.querySelector('.burger-link')
+    let main = document.querySelector('main')
+    let ingredients = document.querySelector('.ingredients')
+    let footer = document.querySelector('footer')
+    let adaptiveBlock = document.querySelector('.adaptive-block')
+
+    burgerLink.addEventListener('click', function (){
+        main.classList.toggle("none-display");
+        footer.classList.toggle("none-display");
+        adaptiveBlock.classList.toggle("block-display");
+        burgerLink.classList.toggle("toggle-btn");
+    })
+</script>
+
 </html>
