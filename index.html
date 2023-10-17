@@ -102,13 +102,18 @@
   </div>
   </body>
 <script>
-    window.addEventListener('resize', move);
-    function move(){
-        const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-        if (viewport_width <= 1600) {
-            document.querySelector('main').innerHTML = `<img src="img/burger.svg" alt="">`
-        }
-    }
+   const mediaQuery = window.matchMedia('(max-width: 1600px)')
+   function handleTabletChange(e){
+       if(e.matches){
+           document.querySelector('main').innerHTML = `<h1>Make <br> your burger</h1>
+<img src="img/burger.svg" alt="">
+<a href="constructor.html" class="btn">make <br> burger</a>`
+       }
+   }
+//mediaQuery.addListener(handleTabletChange)
+   mediaQuery.addEventListener('change', handleTabletChange)
+   handleTabletChange(mediaQuery)
+
     let burgerLink = document.querySelector('.burger-link')
     let main = document.querySelector('main')
     let ingredients = document.querySelector('.ingredients')

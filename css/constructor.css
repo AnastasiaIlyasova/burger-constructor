@@ -172,6 +172,11 @@ footer{
     margin-top: 235px;
     padding-left: 10px;
 }
+select{
+    appearance: none;
+    background: url('../img/arrow-select.svg') no-repeat right;
+    background-position-x: calc(100% - 8px);
+}
 .checkout-btn{
     border-radius: 99px;
     background:#5243C2;
@@ -183,7 +188,7 @@ footer{
     text-align: center;
     font-size: 16px;
     transition-duration: 0.3s;
-    z-index: 20;
+    z-index: 28;
 }
 .checkout-btn:hover{
     box-shadow: 3px 3px 3px 3px rgba(169, 169, 169, .4);
@@ -636,6 +641,11 @@ input::placeholder {
         left: 74%;
     }
 }
+@media (max-height: 884px) {
+    .ketchup-img {
+        top: 50%;
+    }
+}
 @media (max-width: 769px) {
     .hide{
         display: none;
@@ -715,10 +725,16 @@ main{
         background-size: 75%;
     }
     .ketchup-img{
-        top: 54%;
+        top: 67%;
         left: 67%;
     }
 }
+@media (max-height: 667px) {
+    .ketchup-img {
+        top: 63%;
+    }
+}
+
 @media (max-width: 480px) {
     .phone > *:not(:last-child) {
         margin-right: 10px;
@@ -782,18 +798,19 @@ main{
         height: 378px;
     }
     .ketchup-img {
-        top: 37%;
+        top: 46%;
         left: 70%;
         width: 30%;
     }
 }
+
 @media (max-width: 320px) {
     .burger{
         height: 273px;
         overflow-x: hidden;
     }
     .ketchup-img {
-        top: 29%;
+        top: 35%;
         left: 70%;
         width: 30%;
     }
@@ -814,15 +831,5 @@ main{
         overflow-x: hidden;
         display: flex;
         flex-direction: column;
-    }
-}
-@media (max-height: 667px) {
-    .ketchup-img {
-        top: 63%;
-    }
-}
-@media (max-height: 884px) {
-    .ketchup-img {
-        top: 50%;
     }
 }

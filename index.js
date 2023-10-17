@@ -433,10 +433,10 @@ function countHours(numberOfHours){
             minutesSelect[0]=`00`
             minutesSelect[1]=`05`
             inner += `<option>${hours[numberOfHours]}:${minutesSelect[i]}</option>`
-            select.innerHTML = inner
+            select.innerHTML = `<option selected disabled>Time to Delivery</option>`+ inner
         }else{
             inner += `<option>0${hours[numberOfHours]}:${minutesSelect[i]}</option>`
-            select.innerHTML = inner
+            select.innerHTML = `<option selected disabled>Time to Delivery</option>`+ inner
         }
     }
 }

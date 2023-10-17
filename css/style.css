@@ -60,6 +60,7 @@ header{
 	justify-content: space-between;
 	margin-top: 20px;
 	align-items: center;
+	padding: 0 10px;
 }
 .letter {
 	padding: 6px 6px;
@@ -87,6 +88,9 @@ header{
 	padding: 24px 24px;
 	border-radius: 99px;
 	background: url('../img/header.svg') 50% 50% no-repeat rgba(245, 245, 255, 1);
+	cursor: pointer;
+	position: relative;
+	z-index: 100000;
 }
 .call{
 	color: #FF4D4F;
@@ -165,7 +169,6 @@ main{
 	z-index: 6;
 	top: -350px;
 	left: 80px;
-
 }
 .salad{
 	position: relative;
@@ -225,7 +228,6 @@ main{
 	top: -1600px;
 	left: 650px;
 	transform: scale(1.3) rotate(10deg);
-
 }
 .star{
 	position: relative;
@@ -414,26 +416,33 @@ footer{
 .adaptive-head{
 	width: 17%;
 }
+h1{
+	color: #1F2939;
+	font-size: 48px;
+	font-weight: 600;
+	text-align: center;
+	margin-top: 27px;
+	margin-bottom: 10px;
+}
 @media (max-width: 1600px) {
 main{
 	display: block;
 	margin: 0 auto;
+	padding: 0 24px;
 }
 	main img{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-top: -465px;
-		margin-left: -40%;
 		width: 90%;
+		position: relative;
+		display: block;
+		margin: 0 auto;
 	}
 	footer{
 		display: none;
 	}
-}
-@media (max-width: 1000px) {
-	img{
-		width: 50%;
+	.btn{
+		position: absolute;
+		top: 45%;
+		left: 30%;
 	}
 }
 @media (max-width: 769px) {
@@ -471,6 +480,16 @@ main{
 		left: 11px;
 		top: -9px;
 	}
+	main img{
+		width: 100%;
+	}
+	.btn{
+		top: 40%;
+		width: 120px;
+		height: 120px;
+		font-size: 16px;
+		line-height: 20px
+	}
 }
 @media (max-width: 480px) {
 	.phone > *:not(:last-child) {
@@ -492,8 +511,12 @@ main{
 		top: 50px;
 	}
 	main img{
-		margin-left: -73%;
-		width: 150%;
+		margin-left: -18%;
+		width: 140%;
 	}
+	h1{
+		text-align: left;
+	}
+
 
 }
