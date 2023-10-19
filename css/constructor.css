@@ -118,7 +118,6 @@ header{
 main{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 footer{
     flex: 0 0 auto;
@@ -619,33 +618,43 @@ input::placeholder {
     border-bottom: 12px solid white;
 }
 @media (max-width: 1200px) {
-    .ingredients{
+    .ingredients {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 10px;
     }
-    main{
+
+    main {
         justify-content: center;
     }
-    .sum{
+
+    .sum {
         margin-top: 71px;
     }
+
     .ketchup:hover {
         font-weight: 500;
     }
-    .burger{
+
+    .burger {
         background-size: 70%;
     }
-    .ketchup-img{
-        top: 40%;
-        left: 74%;
-    }
-}
-@media (max-height: 884px) {
+
     .ketchup-img {
-        top: 50%;
+        top: 48%;
+        left: 50%;
     }
 }
+@media (max-width: 1100px) {
+    main{
+        flex-wrap: wrap;
+    }
+    .ketchup-img{
+        top: 48%;
+        left: 78%;
+    }
+}
+
 @media (max-width: 769px) {
     .hide{
         display: none;
@@ -729,11 +738,7 @@ main{
         left: 67%;
     }
 }
-@media (max-height: 667px) {
-    .ketchup-img {
-        top: 63%;
-    }
-}
+
 
 @media (max-width: 480px) {
     .phone > *:not(:last-child) {
@@ -751,9 +756,9 @@ main{
     footer{
         display: block;
     }
-    .ingredients > *{
-        padding: 20px 37px;
-    }
+.wrapper{
+    overflow-x: hidden;
+}
     footer{
         display: grid;
         justify-content: center;
@@ -802,6 +807,9 @@ main{
         left: 70%;
         width: 30%;
     }
+    .wrapper{
+        overflow-y: hidden;
+    }
 }
 
 @media (max-width: 320px) {
@@ -825,11 +833,43 @@ main{
     }
     .details > *{
         background-position: 32% 50%;
-        margin: 0;
+        margin: 0 0 0 30px;
+        padding: 20px 44px 20px 60px;
     }
     .ingredients{
         overflow-x: hidden;
         display: flex;
         flex-direction: column;
     }
+    .less-size-tomato{
+        margin-bottom: -14px;
+    }
+    #less-size-cucumber{
+        margin-top: 11px;
+        left: 7px;
+    }
+    .less-size-onion{
+        margin-bottom: -27px;
+    }
+    .less-size-cheese{
+        top: 33px !important;
+        left: 0 !important;
+    }
+    #less-size-salad{
+        margin-bottom: 25px;
+    }
+    .burger_layer:not(:last-child) {
+        top: 19px;
+        left: 0;
+    }
 }
+/*@media (max-height: 884px) {
+    .ketchup-img {
+        top: 50%;
+    }
+}
+@media (max-height: 667px) {
+    .ketchup-img {
+        top: 63%;
+    }
+}*/

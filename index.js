@@ -106,6 +106,7 @@ plusOnion.addEventListener('click', function (){
     addImg(ing)
     disable()
     elem.classList.add('less-size')
+    elem.classList.add('less-size-onion')
 })
 
 plusTomato.addEventListener('click', function (){
@@ -117,6 +118,7 @@ plusTomato.addEventListener('click', function (){
     addImg(ing)
     disable()
     elem.classList.add('less-size')
+    elem.classList.add('less-size-tomato')
 })
 
 plusCucumber.addEventListener('click', function (){
