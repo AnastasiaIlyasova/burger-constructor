@@ -116,9 +116,14 @@ header{
 .menu > *:not(:last-child){
     margin-right: 60px;
 }
-main{
+/*main{
     display: flex;
     justify-content: space-between;
+    overflow-x: hidden;
+}*/
+main{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
     overflow-x: hidden;
 }
 footer{
@@ -243,6 +248,9 @@ span{
     padding: 20px 44px;
     background: url('../img/kcal.svg') 0% 50% no-repeat;
 }
+.bun_bottom{
+    margin-left: -40px;
+}
 .ingredients{
     margin: 71px 15px 0 15px;
     display: flex;
@@ -313,13 +321,14 @@ span{
     justify-content: flex-end;
     flex-wrap: nowrap;
     background: url("../img/bg-2.svg");
-    background-size: 100%;
+    background-size: 90%;
     background-repeat: no-repeat;
-    background-position: center 80%;
+    background-position: bottom 71px right 56px;
     position: relative;
     padding: 0 20px;
     margin-top: -240px;
 }
+
 .burger_layer:not(:last-child){
     position: relative;
     top: 40px;
@@ -401,14 +410,14 @@ span{
 #less-size-cucumber{
     transform: scale(2.1);
     margin-bottom: -50px;
-    left: 350px;
+    left: 333px; /*350*/
     top: 10px;
     margin-top: -16px;
 }
 #less-size-salad{
     transform: scale(0.9);
     margin-bottom: -143px;
-    left: 0;
+    left: -40px;/*-40*/
     top: -10px;
     margin-top: -47px;
 }
@@ -646,14 +655,22 @@ input::placeholder {
         top: 48%;
         left: 50%;
     }
+    #less-size-salad{
+        left: -2px;
+    }
 }
 @media (max-width: 1100px) {
     main{
+        display: flex;
+        overflow-x: hidden;
         flex-wrap: wrap;
     }
     .ketchup-img{
         top: 48%;
         left: 78%;
+    }
+    .bun_bottom{
+        margin-left: 0;
     }
 }
 
@@ -733,7 +750,8 @@ main{
     }
     .burger{
         height: 600px;
-        background-size: 75%;
+        background-size: 70%;
+        background-position: center 50%;
     }
     .ketchup-img{
         top: 67%;

@@ -338,6 +338,13 @@ function addImg(ing){
         elem.innerHTML = `<img src=\"img/${ing}-ing.svg\" alt=\"\">`;
         burger.prepend(elem)
     }
+/*function addImg(ing){
+    elem = document.createElement("img");
+    elem.className = "burger_layer";
+    elem.src = `img/${ing}-ing.svg`;
+    burger.prepend(elem)
+}*/
+
 
 function changeAmount(amountNum, amountDiv, minus){
     amountNum+=1
