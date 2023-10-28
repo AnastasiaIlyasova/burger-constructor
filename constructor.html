@@ -154,12 +154,11 @@
     <button class="close">&#10006</button>
 </div>
                 <div class="card__main">
-                    <input required type="text" class="name" placeholder="Your name">
-                    <input required type="tel" class="number" placeholder="Phone number">
-                    <input required type="text" class="address" placeholder="Shipping address">
-                    <select required class="time-checkout" id='dateInput'>
-                        <option>Time to delivery</option>
-                    </select>
+
+                    <label class="field-item"><input required type="text" class="name"> <span class="name-label">Your name</span></label>
+                    <label class="field-item"><input required type="tel" class="number"><span class="name-label">Phone number</span></label>
+                    <label class="field-item"><input required type="text" class="address"><span class="name-label">Shipping address</span></label>
+                    <label class="field-item"><span class="name-label name-label-select">Time to delivery</span><select required class="time-checkout" id='dateInput'></select></label>
                 </div>
                 <div class="card__bottom">
                     <button class="card__btn btn-cancel">Cancel</button>

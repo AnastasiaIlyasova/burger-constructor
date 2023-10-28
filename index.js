@@ -154,15 +154,25 @@ plusSalad.addEventListener('click', function (){
     disable()
     elem.id='less-size-salad'
 })
-
-plusBun.addEventListener('click', function (){
+//Добавила общую функцию
+function plusForListener(min,oz,kcal,price,amountNumIng,amountIng,minus,ingredient){
+    add(min, oz, kcal, price)
+    amountNumIng+=1
+    amountIng.innerHTML = `${amountNumIng}`;
+    minus.removeAttribute('disabled')
+    addImg(ingredient)
+    disable()
+}
+//Пыталась её применить
+plusBun.addEventListener('click', function (){/*
     add(5,  5,50, 2)
     amountNumBun+=1
     amountBun.textContent = `${amountNumBun}`;
     minusBun.removeAttribute('disabled')
     let ing = 'bun_middle'
     addImg(ing)
-    disable()
+    disable()*/
+    plusForListener(5,5,50,2,amountNumBun,amountBun,minusBun,`bun_middle`)
 })
 
 minusCutlet.addEventListener('click', function (){
@@ -338,13 +348,6 @@ function addImg(ing){
         elem.innerHTML = `<img src=\"img/${ing}-ing.svg\" alt=\"\">`;
         burger.prepend(elem)
     }
-/*function addImg(ing){
-    elem = document.createElement("img");
-    elem.className = "burger_layer";
-    elem.src = `img/${ing}-ing.svg`;
-    burger.prepend(elem)
-}*/
-
 
 function changeAmount(amountNum, amountDiv, minus){
     amountNum+=1
@@ -442,10 +445,10 @@ function countHours(numberOfHours){
             minutesSelect[0]=`00`
             minutesSelect[1]=`05`
             inner += `<option>${hours[numberOfHours]}:${minutesSelect[i]}</option>`
-            select.innerHTML = `<option selected disabled>Time to Delivery</option>`+ inner
+            select.innerHTML =  inner
         }else{
             inner += `<option>0${hours[numberOfHours]}:${minutesSelect[i]}</option>`
-            select.innerHTML = `<option selected disabled>Time to Delivery</option>`+ inner
+            select.innerHTML =  inner
         }
     }
 }
