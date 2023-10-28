@@ -654,6 +654,11 @@ input::placeholder {
     border: 11px solid transparent;
     border-bottom: 12px solid white;
 }
+@media (max-width: 1500px) {
+    .burger_layer:not(:last-child) {
+    left: 120%;
+    }
+}
 
 @media (max-width: 1200px) {
     .ingredients {
@@ -707,6 +712,9 @@ input::placeholder {
     }
     .burger-link{
         display: block;
+    }
+    .burger_layer:not(:last-child) {
+        left: 580px;
     }
 }
 
